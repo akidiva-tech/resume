@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akidiva Carlos — Systems Engineer</title>
+  <meta name="description" content="Systems engineer specializing in low-level infrastructure: custom memory allocators, concurrent runtimes, storage engines, and high-throughput network services. C, Go, Linux internals.">
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Akidiva Carlos — Systems Engineer">
+  <meta property="og:description" content="Building systems that scale: allocators, runtimes, storage engines, network services.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+  <body>
+  <a href="#about" class="skip-link">Skip to main content</a>
+<header class = navbar>
+<div class="logo">
+  <a href="#" arial-label="home">
+    <!--clean SVG Hexagon with initial A-->
+    <svg width="42" height="42" viewBox="0 0 100 100" fill="none">
+      <polygon points="50 3, 93 25, 93 75, 50 97, 7 75, 7 25" stroke="#ffffff" stroke-width="5" />
+      <text x="50" y="65" text-anchor="middle" fill="#ffffff" font-family="Fira Code, monospace" font-size="42" font-weight="500">A</text>
+    </svg>
+  </a>
+</div>
+<nav class="nav-links">
+  <ol>
+<li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+</ol>
+<a href="/resume.pdf" class="resume-btn" target="_blank">Resume</a>
+
+</nav>
+</header>
+
+    <main class="container">
+  <section class="hero">
+    <p class="hero-intro">Hi, my name is</p>
+    <h1 class="hero-name">Akidiva Carlos.</h1>
+    <h2 class="hero-tagline">I build systems that scale.</h2>
+    <p class="hero-description">
+      I'm a systems engineer specializing in low-level infrastructure: custom memory allocators,
+      concurrent runtime internals, storage engines, and high-throughput network services.
+      I write performant C and Go code that runs close to the metal—where nanoseconds matter
+      and correctness is non-negotiable.
+    </p>
+    <a href="/resume.pdf" class="cta-btn">Check out my resume!</a>
+  </section>
+  <section id="about" class="about-section">
+  <h2 class="numbered-heading">About Me</h2>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I'm a systems engineer with a focus on infrastructure software—the layer beneath
+        applications where performance, correctness, and resource constraints define the
+        problem space. My path started with curiosity about how computers actually execute
+        code: memory layout, syscall overhead, cache behavior, scheduler decisions.
+      </p>
+      <p>
+        That curiosity led to building production-grade systems from scratch: a Unix-like
+        shell with job control, an epoll-driven HTTP server, an LSM-tree key-value store
+        with WAL and compaction, a custom malloc implementation with segregated free lists
+        and thread-local caches, and distributed rate limiting and job queue systems.
+        I care about zero-copy designs, lock-free data structures, and understanding
+        exactly what the CPU is doing at every layer.
+      </p>
+      <p>
+        I work primarily in C and Go—C when I need absolute control over memory and
+        syscalls, Go when I need concurrency primitives that don't get in the way.
+        I'm comfortable across the stack: from kernel interfaces (epoll, io_uring, signals)
+        through runtime internals (goroutine scheduling, GC interaction) up to
+        distributed systems patterns (consensus, backpressure, observability).
+      </p>
+      <p>Core competencies:</p>
+
+      <div class="skills-grid">
+        <div class="skills-category">
+          <h4 class="skills-category-title">Languages</h4>
+          <ul class="skills-list">
+            <li>C (C11, POSIX)</li>
+            <li>Go (1.21+)</li>
+            <li>Python (tooling/automation)</li>
+          </ul>
+        </div>
+        <div class="skills-category">
+          <h4 class="skills-category-title">Systems</h4>
+          <ul class="skills-list">
+            <li>Linux Internals</li>
+            <li>Network Programming</li>
+            <li>Memory Management</li>
+            <li>Concurrency & Synchronization</li>
+          </ul>
+        </div>
+        <div class="skills-category">
+          <h4 class="skills-category-title">Storage & Data</h4>
+          <ul class="skills-list">
+            <li>LSM Trees / SSTables</li>
+            <li>Write-Ahead Logging</li>
+            <li>Custom Allocators</li>
+            <li>Lock-Free Structures</li>
+          </ul>
+        </div>
+        <div class="skills-category">
+          <h4 class="skills-category-title">Distributed Systems</h4>
+          <ul class="skills-list">
+            <li>Rate Limiting (Token Bucket, Sliding Window)</li>
+            <li>Job Queues & Scheduling</li>
+            <li>Load Balancing (L7)</li>
+            <li>Observability / Tracing</li>
+          </ul>
+        </div>
+        <div class="skills-category">
+          <h4 class="skills-category-title">Infrastructure</h4>
+          <ul class="skills-list">
+            <li>Docker / Containers</li>
+            <li>CI/CD Pipelines</li>
+            <li>PostgreSQL / Redis</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-pic">
+      <div class="pic-wrapper">
+        <!-- Replace src with your actual image path -->
+        <img src="1000012116.jpg" alt="Headshot" />
+      </div>
+    </div>
+  </div>
+</section>
+<section id="experience" class="jobs-section">
+  <h2 class="numbered-heading">Where I’ve Worked</h2>
+
+  <div class="jobs-container">
+    <!-- Left Vertical Tab List -->
+    <div class="tab-list" role="tablist" aria-label="Job tabs">
+      <button class="tab-btn active" data-target="job-1">Axiom Systems</button>
+      <button class="tab-btn" data-target="job-2">Meridian Data</button>
+      <button class="tab-btn" data-target="job-3">Helix Runtime</button>
+      <button class="tab-btn" data-target="job-4">Independent</button>
+    </div>
+
+    <!-- Right Content Panels -->
+    <div class="tab-panels">
+      <div id="job-1" class="job-panel active">
+        <h3>Systems Engineer <span class="company">@ <a href="#">Axiom Systems</a></span></h3>
+        <p class="job-range">2025 — 2026</p>
+        <ul class="job-duties">
+          <li>Design and implement high-throughput network services in Go — 100k+ req/s with sub-millisecond p99 latency.</li>
+          <li>Built custom memory allocator (segregated fits + thread-local caches) reducing GC pause times 60% in hot paths.</li>
+          <li>Developed LSM-tree storage engine with WAL, bloom filters, and tiered compaction for embedded metadata store.</li>
+          <li>Own Linux kernel–level debugging: eBPF tracing, perf analysis, syscall optimization for storage hot paths.</li>
+        </ul>
+      </div>
+
+      <div id="job-2" class="job-panel">
+        <h3>Backend Engineer <span class="company">@ <a href="#">Meridian Data</a></span></h3>
+        <p class="job-range">2024 — 2025</p>
+        <ul class="job-duties">
+          <li>Built distributed rate limiting platform (token bucket + sliding window) on Redis Cluster — 50M ops/day.</li>
+          <li>Implemented job queue system with priority scheduling, exponential backoff, and dead-letter handling.</li>
+          <li>Optimized PostgreSQL query plans and connection pooling; cut p95 latency from 200ms → 40ms.</li>
+          <li>Designed CI/CD pipelines with contract testing, chaos engineering, and zero-downtime deployments.</li>
+        </ul>
+      </div>
+
+      <div id="job-3" class="job-panel">
+        <h3>Runtime Engineer Intern <span class="company">@ <a href="#">Helix Runtime</a></span></h3>
+        <p class="job-range">2023 — 2024</p>
+        <ul class="job-duties">
+          <li>Contributed to Go runtime: scheduler improvements, GC write barrier optimization, sync.Pool tuning.</li>
+          <li>Built lock-free MPSC queue and hazard-pointer reclamation for internal message bus.</li>
+          <li>Authored internal tooling: memory profiler, allocation tracker, and flame graph generator in C/Go.</li>
+          <li>Presented at internal systems seminar on "Zero-Copy Networking with io_uring".</li>
+        </ul>
+      </div>
+
+      <div id="job-4" class="job-panel">
+        <h3>Independent Systems Work <span class="company">@ <a href="#">Independent</a></span></h3>
+        <p class="job-range">2022 — 2023</p>
+        <ul class="job-duties">
+          <li>Built Unix-like shell (C) with job control, pipelines, and signal-safe process management.</li>
+          <li>Implemented epoll-based HTTP/1.1 server with CGI, virtual hosts, and thread pool — 10k concurrent connections.</li>
+          <li>Developed custom malloc with segregated free lists, boundary tags, and per-thread arenas.</li>
+          <li>Open-source contributions: memory-safety patches, CLI tools, and documentation for systems projects.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="work" class="projects-section">
+  <h2 class="numbered-heading">Some Things I’ve Built</h2>
+
+  <div class="projects-list">
+
+    <!-- Project 1 (Image Left, Content Right) - Mini Shell -->
+    <div class="project-item">
+      <div class="project-image">
+        <a href="#" target="_blank">
+          <div class="img-wrapper">
+            <img src="project1.svg" alt="Mini Shell screenshot — terminal showing command pipeline execution" />
+          </div>
+        </a>
+      </div>
+
+      <div class="project-content">
+        <p class="project-overline">Systems Programming</p>
+        <h3 class="project-title"><a href="#">Mini Shell</a></h3>
+        <div class="project-description">
+          <p>
+            A lightweight Unix-like command interpreter written in C featuring built-in commands,
+            pipeline support, I/O redirection, and job control with signal handling. Implements
+            a custom parser and executor with support for background processes and job management.
+          </p>
+        </div>
+        <ul class="project-tech-list">
+          <li>C</li>
+          <li>POSIX</li>
+          <li>Signal Handling</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="#" target="_blank" aria-label="External Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 (Content Left, Image Right - Inverted) - Web Server -->
+    <div class="project-item inverted">
+      <div class="project-content">
+        <p class="project-overline">Systems Programming</p>
+        <h3 class="project-title"><a href="#">Web Server</a></h3>
+        <div class="project-description">
+          <p>
+            A concurrent HTTP/1.1 server built from scratch in C with epoll-based event loop,
+            static file serving, CGI support, and configurable virtual hosts. Handles thousands
+            of concurrent connections with a thread pool and non-blocking I/O.
+          </p>
+        </div>
+        <ul class="project-tech-list">
+          <li>C</li>
+          <li>epoll</li>
+          <li>HTTP/1.1</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="#" target="_blank" aria-label="External Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-image">
+        <a href="#" target="_blank">
+          <div class="img-wrapper">
+            <img src="project2.svg" alt="Web Server screenshot — terminal showing HTTP request logs with latency metrics" />
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="more-projects-section">
+  <h2 class="more-projects-heading">Other Noteworthy Projects</h2>
+  <a href="https://github.com/akidiva-tech" target="_blank" class="archive-link">view the archive</a>
+
+  <div class="projects-grid">
+
+    <!-- Card 1: Mini Shell -->
+    <div class="project-card">
+      <div class="card-top">
+        <div class="folder-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <h3 class="card-title"><a href="#" target="_blank">Mini Shell</a></h3>
+      <p class="card-description">
+        A lightweight Unix-like command interpreter written in C featuring built-in commands, pipeline support, I/O redirection, and job control with signal handling.
+      </p>
+
+      <ul class="card-tech-list">
+        <li>C</li>
+        <li>Linux</li>
+        <li>POSIX</li>
+      </ul>
+    </div>
+
+    <!-- Card 2: Web Server -->
+    <div class="project-card">
+      <div class="card-top">
+        <div class="folder-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <h3 class="card-title"><a href="#" target="_blank">Web Server</a></h3>
+      <p class="card-description">
+        A concurrent HTTP/1.1 server built from scratch in C with epoll-based event loop, static file serving, CGI support, and configurable virtual hosts.
+      </p>
+
+      <ul class="card-tech-list">
+        <li>C</li>
+        <li>epoll</li>
+        <li>HTTP/1.1</li>
+      </ul>
+    </div>
+
+    <!-- Card 3: Mini Key-Value Database -->
+    <div class="project-card">
+      <div class="card-top">
+        <div class="folder-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <h3 class="card-title"><a href="#" target="_blank">Mini Key-Value Database</a></h3>
+      <p class="card-description">
+        An embedded key-value store with LSM-tree architecture, WAL for durability, bloom filters for fast reads, and SSTable compaction written in Go.
+      </p>
+
+      <ul class="card-tech-list">
+        <li>Go</li>
+        <li>LSM Tree</li>
+        <li>WAL</li>
+      </ul>
+    </div>
+
+    <!-- Card 4: Load Balancer -->
+    <div class="project-card">
+      <div class="card-top">
+        <div class="folder-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <h3 class="card-title"><a href="#" target="_blank">Load Balancer</a></h3>
+      <p class="card-description">
+        A Layer 7 load balancer with round-robin, least connections, and IP hash algorithms, health checks, TLS termination, and graceful backend scaling.
+      </p>
+
+      <ul class="card-tech-list">
+        <li>Go</li>
+        <li>HTTP/2</li>
+        <li>TLS</li>
+      </ul>
+    </div>
+
+    <!-- Card 5: REST API with Database -->
+    <div class="project-card">
+      <div class="card-top">
+        <div class="folder-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <h3 class="card-title"><a href="#" target="_blank">REST API with Database</a></h3>
+      <p class="card-description">
+        A production-ready RESTful API with PostgreSQL, featuring JWT authentication, request validation, OpenAPI docs, migration system, and comprehensive test coverage.
+      </p>
+
+      <ul class="card-tech-list">
+        <li>Go</li>
+        <li>PostgreSQL</li>
+        <li>JWT</li>
+      </ul>
+    </div>
+
+    <!-- Card 6: Rate Limiter -->
+    <div class="project-card">
+      <div class="card-top">
+        <div class="folder-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <h3 class="card-title"><a href="#" target="_blank">Rate Limiter</a></h3>
+      <p class="card-description">
+        A distributed rate limiting library implementing token bucket, sliding window, and fixed window algorithms with Redis backend for horizontal scaling.
+      </p>
+
+      <ul class="card-tech-list">
+        <li>Go</li>
+        <li>Redis</li>
+        <li>Token Bucket</li>
+      </ul>
+    </div>
+
+    <!-- Card 7: Job Queue -->
+    <div class="project-card">
+      <div class="card-top">
+        <div class="folder-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <h3 class="card-title"><a href="#" target="_blank">Job Queue</a></h3>
+      <p class="card-description">
+        A resilient background job processing system with priority queues, exponential backoff retries, dead letter handling, and real-time monitoring dashboard.
+      </p>
+
+      <ul class="card-tech-list">
+        <li>Go</li>
+        <li>Redis</li>
+        <li>Cron</li>
+      </ul>
+    </div>
+
+    <!-- Card 8: Memory Allocator -->
+    <div class="project-card">
+      <div class="card-top">
+        <div class="folder-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <h3 class="card-title"><a href="#" target="_blank">Memory Allocator</a></h3>
+      <p class="card-description">
+        A custom memory allocator implementing segregated free lists, boundary tags, and coalescing with thread-local caches for reduced lock contention in multi-threaded workloads.
+      </p>
+
+      <ul class="card-tech-list">
+        <li>C</li>
+        <li>malloc</li>
+        <li>pthreads</li>
+      </ul>
+    </div>
+
+    <!-- Card 9: Modular E-Commerce Shopping Cart -->
+    <div class="project-card">
+      <div class="card-top">
+        <div class="folder-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="#" target="_blank" aria-label="External Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+
+      <h3 class="card-title"><a href="#" target="_blank">Modular E-Commerce Shopping Cart</a></h3>
+      <p class="card-description">
+        An object-oriented shopping cart module built with local storage persistence and verified with a comprehensive Jasmine unit testing suite.
+      </p>
+
+      <ul class="card-tech-list">
+        <li>JavaScript</li>
+        <li>Jasmine</li>
+        <li>LocalStorage</li>
+      </ul>
+    </div>
+
+    <!-- Card 10: CLI File Search & Encryption Utility -->
+    <div class="project-card">
+      <div class="card-top">
+        <div class="folder-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <h3 class="card-title"><a href="#" target="_blank">CLI File Search & Encryption Utility</a></h3>
+      <p class="card-description">
+        A lightweight Linux command-line utility written in C to programmatically parse and read text files across encrypted volumes.
+      </p>
+
+      <ul class="card-tech-list">
+        <li>C</li>
+        <li>Linux</li>
+        <li>GCC</li>
+      </ul>
+    </div>
+
+    <!-- Card 11: Interactive Rock Paper Scissors -->
+    <div class="project-card">
+      <div class="card-top">
+        <div class="folder-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="#" target="_blank" aria-label="External Link">
+            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+
+      <h3 class="card-title"><a href="#" target="_blank">Interactive Rock Paper Scissors</a></h3>
+      <p class="card-description">
+        A browser-based game featuring score tracking, keyboard shortcuts, and automated play modes built with pure DOM manipulation.
+      </p>
+
+      <ul class="card-tech-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="show-more-wrapper">
+    <button class="cta-btn">Show More</button>
+  </div>
+</section>
+
+<!-- Technical Writing & Talks -->
+<section class="writing-section">
+  <h2 class="numbered-heading">Technical Writing & Talks</h2>
+  <div class="writing-grid">
+    <article class="writing-card">
+      <p class="writing-date">2024</p>
+      <h3 class="writing-title"><a href="#">Zero-Copy Networking with io_uring: A Deep Dive</a></h3>
+      <p class="writing-description">How io_uring enables true zero-copy packet processing in userspace, with benchmarks comparing epoll vs io_uring vs XDP.</p>
+      <ul class="writing-tags"><li>Linux</li><li>io_uring</li><li>Networking</li></ul>
+    </article>
+    <article class="writing-card">
+      <p class="writing-date">2024</p>
+      <h3 class="writing-title"><a href="#">Building a Custom Malloc: Segregated Fits & Thread-Local Caches</a></h3>
+      <p class="writing-description">Design decisions behind a production allocator: size classes, boundary tags, coalescing strategies, and false-sharing mitigation.</p>
+      <ul class="writing-tags"><li>C</li><li>Memory</li><li>Concurrency</li></ul>
+    </article>
+    <article class="writing-card">
+      <p class="writing-date">2023</p>
+      <h3 class="writing-title"><a href="#">LSM Trees in Practice: Write Amplification & Compaction Tuning</a></h3>
+      <p class="writing-description">Real-world tradeoffs in LSM-tree configuration: level vs tiered compaction, bloom filter sizing, and WAL durability modes.</p>
+      <ul class="writing-tags"><li>Go</li><li>Storage</li><li>Databases</li></ul>
+    </article>
+    <article class="writing-card">
+      <p class="writing-date">2023</p>
+      <h3 class="writing-title"><a href="#">Lock-Free MPSC Queues & Hazard Pointers</a></h3>
+      <p class="writing-description">Implementing a wait-free multi-producer single-consumer queue with safe memory reclamation — no locks, no ABA.</p>
+      <ul class="writing-tags"><li>C</li><li>Lock-Free</li><li>Memory Reclamation</li></ul>
+    </article>
+  </div>
+  <p class="writing-cta"><a href="https://github.com/akidiva-tech" target="_blank">More on GitHub →</a></p>
+</section>
+
+<!-- Currently Exploring -->
+<section class="now-section">
+  <h2 class="numbered-heading">Currently Exploring</h2>
+  <div class="now-grid">
+    <div class="now-item">
+      <h3>io_uring & Kernel Bypass</h3>
+      <p>Registered I/O, fixed buffers, and SQ polling for sub-microsecond tail latency.</p>
+    </div>
+    <div class="now-item">
+      <h3>Rust for Systems</h3>
+      <p>Evaluating Rust's ownership model for allocator internals and lock-free data structures.</p>
+    </div>
+    <div class="now-item">
+      <h3>eBPF Observability</h3>
+      <p>Programmable kernel tracing for production profiling without instrumentation overhead.</p>
+    </div>
+    <div class="now-item">
+      <h3>Distributed Consensus</h3>
+      <p>Raft implementation nuances: leadership transfer, membership changes, snapshotting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04. Contact Section -->
+<section id="contact" class="contact-section">
+  <p class="contact-overline">04. What’s Next?</p>
+  <h2 class="contact-title">Get In Touch</h2>
+  <p class="contact-description">
+    I’m open to opportunities in systems engineering, infrastructure, and backend platforms.
+    Whether you have a role, a technical question, or want to discuss systems design —
+    reach out and I’ll get back to you.
+  </p>
+  <a href="mailto:akidiva.tech@gmail.com" class="cta-btn contact-btn">Say Hello</a>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-socials-mobile">
+    <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+    <a href="https://www.linkedin.com/in/akidiva-carlos-276587346" target="_blank" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" role="img" r="2"></circle></svg></a>
+    <a href="mailto:akidiva.tech@gmail.com" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+  </div>
+  <a href="https://github.com/akidiva-tech/portfolio" target="_blank" class="footer-credit">
+    <p>Built by Akidiva Carlos</p>
+    <p>Designed by Brittany Chiang</p>
+  </a>
+</footer>
+
+<!-- Fixed Left Sidebar (Social Icons) -->
+<div class="fixed-sidebar-left">
+  <ul class="social-list">
+    <li>
+      <a href="https://github.com/akidiva-tech" target="_blank" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/akidiva-carlos-276587346" target="_blank" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" role="img" r="2"></circle></svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:akidiva.tech@gmail.com" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- Fixed Right Sidebar (Vertical Email) -->
+<div class="fixed-sidebar-right">
+  <div class="email-wrapper">
+    <a href="mailto:akidivaangweye@gmail.com">akidivaangweye@gmail.com</a>
+  </div>
+</div>
+</main>
+  
+
+
+<script src="script.js"></script>
+  </body>
+</html>
